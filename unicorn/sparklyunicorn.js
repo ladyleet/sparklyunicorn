@@ -1,17 +1,16 @@
-let fs = require('fs');
-fs.mkdir('erdbeer' function(err) {
+const fs = require('fs');
+
+const folderName = 'erdbeer';
+
+function sparklyunicorn () {
+  fs.mkdir(folderName);
+
+  fs.writeFile(`${folderName}/lollipop.js`, "Hey there!", function(err) {
     if(err) {
-        return console.log(err);
+      return console.log(err);
     }
-
     console.log("The file was saved!");
-});
+  });
+}
 
-let fs = require('fs');
-fs.writeFile("lollipop.js", "Hey there!", function(err) {
-    if(err) {
-        return console.log(err);
-    }
-
-    console.log("The file was saved!");
-});
+module.exports = sparklyunicorn;
